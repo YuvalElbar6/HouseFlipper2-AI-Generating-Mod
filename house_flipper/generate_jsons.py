@@ -95,6 +95,12 @@ def generate_all_for_house(
     house_name: str,
     retries: int = 3
 ) -> Optional[Tuple[JobModel, HouseDesign, Path]]:
+    '''
+    The function is generating the job description, the house desgin and the blueprint.
+    :param house_name - str - The name of the house
+    :param retries - int - The amount of retries before the model fails.
+    :returns job and desgins jsons and the blueprint png
+    '''
     job = generate_job_json(house_name, retries=retries)
     if not job:
         print("Stopping: job failed.")

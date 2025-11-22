@@ -5,6 +5,7 @@ from pathlib import Path
 from models import HouseDesign, JobModel
 
 def get_ai_mods_dir() -> Path:
+    '''Get the json mod path'''
     docs = Path(os.path.expanduser("~/Documents"))
     hf2_docs = docs / "House Flipper 2"
     ai_mods = hf2_docs / "AI_Mods"
@@ -13,6 +14,7 @@ def get_ai_mods_dir() -> Path:
 
 
 def get_custom_images_dir() -> Path:
+    '''Get the blueprint mod's path'''
     docs = Path(os.path.expanduser("~/AppData"))
     file_location = docs / "LocalLow" / "Frozen District"
     hf2_docs = file_location / "House Flipper 2"

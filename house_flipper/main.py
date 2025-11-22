@@ -6,6 +6,9 @@ from helper import get_ai_mods_dir,  save_bundle
 AI_MODS_DIR = get_ai_mods_dir()
 
 def process_houses(limit: int = 5, out_dir: Path = AI_MODS_DIR):
+    '''
+    The function is processing 
+    '''
     results = []
 
     while len(results) < limit:

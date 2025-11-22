@@ -10,6 +10,12 @@ if not HF_TOKEN:
 client = OpenAI(api_key=HF_TOKEN)
 
 def safe_text_request(prompt: str, model: str, retries: int = 3):
+    '''
+    A function that generate a safe text request for the chat model.
+    :param prompt - str - The given prompt to the model
+    :param model - str - The current model we are using to generate the text
+    :param retries - str - The amount of retries it tries to do before failing
+    '''
     last_err = None
     for attempt in range(1, retries + 1):
         try:

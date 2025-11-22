@@ -23,7 +23,14 @@ def get_custom_images_dir() -> Path:
     return ai_mods
 
 def save_bundle(house_name: str ,job: JobModel, design: HouseDesign, blueprint_path: Path, out_dir: Path):
-
+    '''
+    The function is saving all the generated data as a bundle.
+    :param house_name - str - The name of the house
+    :param job - JobModel - The generated job object
+    :param design - HouseDesign - The generated design object
+    :param blueprint_path - Path - The path to the generated blueprint
+    :param out_dir - Path - The path to save the bundle in
+    '''
     bundle_path = out_dir / f"{house_name}_bundle.json"
     job_path = out_dir / f"{house_name}_job.json"
     design_path = out_dir / f"{house_name}_design.json"

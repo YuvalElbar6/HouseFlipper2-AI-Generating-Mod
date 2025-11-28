@@ -35,13 +35,9 @@ def safe_text_request(prompt: str, model: str, retries: int = 3):
             last_err = e
             print("Connection issue, retrying...")
             time.sleep(2)
-        except OpenAIError as e:
-            print(f"OpenAI error: {e}")
+        except (OpenAIError, Exception) as e:
+            print(f"An error has occured: {e}")
             return None
-        except Exception as e:
-            print(f"Unexpected error: {e}")
-            return None
-
     print(f"Failed after retries. Last error: {last_err}")
     return None
 

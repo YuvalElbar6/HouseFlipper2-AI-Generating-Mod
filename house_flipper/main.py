@@ -6,8 +6,10 @@ from helper import get_ai_mods_dir,  save_bundle
 AI_MODS_DIR = get_ai_mods_dir()
 
 def process_houses(limit: int = 5, out_dir: Path = AI_MODS_DIR):
-    '''
-    The function is processing 
+    f'''
+    The function is processing the house's request AKA Job, desgin and blueprint.
+    :param limit - int - The limit of custom houses you can generate
+    :param out_dir - Path - The dir in which you save your files
     '''
     results = []
 
